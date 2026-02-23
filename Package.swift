@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 5.5
 import PackageDescription
 
 let package = Package(
@@ -14,8 +14,8 @@ let package = Package(
             teamIdentifier: "",
             displayVersion: "1.0",
             bundleVersion: "1",
-            iconAssetName: nil,
-            accentColorAssetName: nil,
+            appIcon: .placeholder(icon: .toy),
+            accentColor: .presetColor(.blue),
             supportedDeviceFamilies: [
                 .phone,
                 .pad
@@ -25,7 +25,8 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            capabilities: []
         )
     ],
     targets: [
