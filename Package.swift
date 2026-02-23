@@ -1,23 +1,24 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
     name: "hajimete",
     platforms: [
-        .iOS(.v18)
+        .iOS("18.0")
     ],
     products: [
         .iOSApplication(
             name: "hajimete",
             targets: ["hajimete"],
             bundleIdentifier: "com.example.hajimete",
+            teamIdentifier: "",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .toy),
-            accentColor: .presetColor(.blue),
+            iconAssetName: nil,
+            accentColorAssetName: nil,
             supportedDeviceFamilies: [
-                .pad,
-                .phone
+                .phone,
+                .pad
             ],
             supportedInterfaceOrientations: [
                 .portrait,
